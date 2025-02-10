@@ -68,8 +68,8 @@ const VideoPage = ({viSiBle}) => {
 
     <div className="comments-section">
       <h2>💬 Comments</h2>
-      {comments.length > 0 ? (
-        comments.map((comment, index) => (
+      {comments.length > 1 ? (
+        comments.slice(1).map((comment, index) => (
           <div key={index} className="comment">
             <img src={comment.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="User" loading="lazy"/>
             <div className="comment-text">
@@ -81,6 +81,7 @@ const VideoPage = ({viSiBle}) => {
       ) : (
         <p>No comments available.</p>
       )}
+
     </div>
   </article>
   );

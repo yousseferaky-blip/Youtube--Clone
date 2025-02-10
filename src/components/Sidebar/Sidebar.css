@@ -1,0 +1,82 @@
+.aside{
+    position: fixed;
+    top: 70px;
+    left: 0;
+    box-shadow:  0px 0px 1px 0px  #0003;
+    background: #fff;
+    width: 200px;
+    height: 100vh;
+    transition: 0.5s;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow:auto;
+}
+.showSidebar{
+    padding: 10px;
+    height: 100vh;
+    position: fixed;
+    top: 70px;
+    left: -200px;
+    transition: 0.5s;
+    box-shadow:  0px 0px 1px 0px  #0003;
+    background: #fff;
+}
+@media screen and (max-width:800px) {
+    .aside{
+        left: -200px;
+    }
+    .showSidebar{
+        left: 0px;
+        width: 200px;
+        z-index: 10;
+    }
+}
+aside ul{
+    list-style: none;
+    padding: 0px;
+    border-bottom: 1px solid #bbb3b3;
+}
+aside ul li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    transition:  0.3s;
+}
+aside ul li.active{
+    background: #e0d9d9;
+}
+aside ul li:hover{
+    background: #f1f1f1;
+}
+
+aside .icon{
+    font-size: 22px;
+    color: #ed3833;
+}
+
+aside span{
+    font-size: 16px;
+    letter-spacing: 1.01px;
+}
+
+aside .Sub  {
+   border-bottom: none;
+   padding: 10px 0;
+}
+aside .Sub  h3{
+    font-size: 13px;
+    margin: 10px 20px ;
+    color: #5a5a5a;
+    text-transform: uppercase;
+}
+aside .Sub  li{
+    height: 50px;
+}
+aside .Sub img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
